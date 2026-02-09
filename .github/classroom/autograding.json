@@ -1,0 +1,49 @@
+{
+  "tests": [
+    {
+      "name": "Validering: Tomma fält",
+      "run": "npx jest -t 'Should NOT add transaction if inputs are empty'",
+      "points": 10
+    },
+    {
+      "name": "Validering: Felaktiga tal",
+      "run": "npx jest -t 'Should handle invalid numbers gracefully'",
+      "points": 10
+    },
+    {
+      "name": "Inkomst: Lägg till i listan",
+      "run": "npx jest -t 'Should add an item to the income list'",
+      "points": 10
+    },
+    {
+      "name": "Utgift: Lägg till i listan",
+      "run": "npx jest -t 'Should add an item to the expense list'",
+      "points": 10
+    },
+    {
+      "name": "Format: Rätt textformat",
+      "run": "npx jest -t 'Should format the list item text correctly'",
+      "points": 10
+    },
+    {
+      "name": "Inkomst: Uppdatera saldo",
+      "run": "npx jest -t 'Should increase balance when income is added'",
+      "points": 10
+    },
+    {
+      "name": "Utgift: Uppdatera saldo",
+      "run": "npx jest -t 'Should decrease balance when expense is added'",
+      "points": 10
+    },
+    {
+      "name": "UX: Töm fält efter köp",
+      "run": "npx jest -t 'Should clear input fields after adding transaction'",
+      "points": 10
+    },
+    {
+      "name": "Inlämning: Videoprov",
+      "run": "npx jest -t 'Should contain a video file named'",
+      "points": 20
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+/* styles.css */
+
+/* ==== Färgpalett (inspirerat av Material Design) ==== */
+:root {
+  --primary-color: #6200EE;       /* Lila */
+  --secondary-color: #03DAC6;     /* Turkos */
+  --surface-color: #FFFFFF;       /* Vit yta */
+  --background-color: #F5F5F5;    /* Ljus bakgrund */
+  --text-color: #333333;          /* Standard textfärg */
+  --on-primary-color: #FFFFFF;    /* Textfärg ovanpå primary */
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --border-radius: 4px;
+}
+
+/* Nollställ standardmarginaler och paddningar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Bakgrundsfärg och standardtypsnitt */
+body {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 2rem;
+}
+
+/* Övergripande rubrikstil */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Sekundära rubriker (h2) */
+h2 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* Wrapper runt formulär (om du vill samla dem i en container) */
+div {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* ==== Textfält (Material UI-inspirerat) ==== */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  background: var(--surface-color);
+  border: 2px solid #ccc;
+  border-radius: var(--border-radius);
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* ==== Etiketter (labels) ==== */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+/* ==== Knappar (Material UI-inspirerade) ==== */
+button {
+  padding: 0.6rem 1rem;
+  margin-right: 1rem;
+  background-color: var(--primary-color);
+  color: var(--on-primary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #3700B3; /* Mörkare nyans av primärfärgen */
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+button:active {
+  background-color: #30009C; /* Ännu mörkare vid klick */
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+/* ==== Listor för inkomster, utgifter och transaktioner ==== */
+ul {
+  list-style-type: none; 
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background-color: var(--surface-color);
+  border: 1px solid #eee;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+ul li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Ta bort sista understrykningen i listan */
+ul li:last-child {
+  border-bottom: none;
+}
+
+/* ==== Visning av saldo ==== */
+#balance {
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-left: 0.5rem;
+}
+
+/* Mindre responsiv anpassning - ex. mobilskärm */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+  
+  button {
+    margin-top: 1rem;
+    width: 100%;
+    display: block;
+  }
+}
